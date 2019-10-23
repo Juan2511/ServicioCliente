@@ -1,0 +1,48 @@
+﻿@model ServicioCliente.UI.Models.Servicio
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nuevo</title>
+</head>
+<body>
+    <form method="post" asp-controller="serviciocliente" asp-action="nuevo">
+        <table>
+            <tr>
+                <td>Correo</td>
+                <td>
+                    <input type="text" asp-for="Correo" required="required" />
+                </td>
+            </tr>
+            <tr>
+                <td>Nombres</td>
+                <td>
+                    <input type="text" asp-for="Nombres" required="required" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1">
+                    Calificación:
+                </td>
+                <td colspan="3">
+                    <input type="radio" name="Calificacion" value="1" />
+                    <input type="radio" name="Calificacion" value="2" />
+                    <input type="radio" name="Calificacion" value="3" />
+                    <input type="radio" name="Calificacion" value="4" />
+                    <input type="radio" name="Calificacion" value="5" />
+                    <input type="radio" name="Calificacion" value="6" />
+                    <input type="radio" name="Calificacion" value="7" />
+                    <input type="radio" name="Calificacion" value="8" />
+                    <input type="radio" name="Calificacion" value="9" />
+                    <input type="radio" name="Calificacion" value="10" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

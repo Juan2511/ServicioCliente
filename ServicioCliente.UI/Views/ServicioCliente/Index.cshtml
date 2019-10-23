@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Reporte de Atención de Servicios</h2>
+    <a asp-controller="serviciocliente" asp-action="add">Nueva Atención</a>
+    <table border="1" cellpadding="2" cellspacing="2">
+        <tr>
+            <th>Correo</th>
+            <th>Nombres</th>
+        </tr>
+        @foreach(var servicio in ViewBag.servicio)
+        {
+        <tr>
+            <td>@servicio.Correo</td>
+            <td>@servicio.Nombres</td>
+        </tr>
+        }
+    </table>
+</body>
+</html>
